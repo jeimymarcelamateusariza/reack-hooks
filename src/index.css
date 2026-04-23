@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.bg-gradient {
+  @apply bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+/* Ensure fonts are applied */
+* {
+  font-family: 'Airbnb Cereal VF', Circular, -apple-system, system-ui, Roboto, 'Helvetica Neue', sans-serif;
+}
