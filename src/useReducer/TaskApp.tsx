@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useReducer, useState, useEffect } from "react";
 
 import { Plus, Trash2, Check } from "lucide-react";
 
@@ -8,16 +8,19 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getTastInitialState, taskReducer } from "./reducer/taskReducer";
 
-interface Todo {
-  id: number;
-  text: string;
-  completed: boolean;
-}
-
 export const TasksApp = () => {
   //const [todos, setTodos] = useState<Todo[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [state, dispatch] = useReducer(taskReducer, getTastInitialState());
+
+  useEffect(() => {
+    //console.log("Estado actualizado:", state);
+    localStorage.setItem("task-state", JSON.stringify(state));
+
+    // return () => {
+    //   second;
+    // };
+  }, [state]);
 
   const addTodo = () => {
     if (inputValue.length === 0) return;

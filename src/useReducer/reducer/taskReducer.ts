@@ -20,12 +20,19 @@ export type TaskActions =
     | { type: 'DELETE_TODO', payload: number } //Eliminar
 
 
-export const getTastInitialState = (): TaskState => ({
-    todos: [],
-    length: 0,
-    completed: 0,
-    pending: 0,
-});
+export const getTastInitialState = (): TaskState => {
+    const localStorageState = localStorage.getItem("task-state");
+
+    if (!localStorageState) {
+        return {
+            todos: [],
+            length: 0,
+            completed: 0,
+            pending: 0,
+        };
+    }
+    return JSON.parse(localStorageState) as TaskState;
+};
 
 export const taskReducer = (state: TaskState, action: TaskActions): TaskState => {
 
