@@ -7,9 +7,9 @@ import "./index.css";
 // import { TrafficLightWithHook } from "./useEffect/TrafficLightWhitHook";
 // import { PhotoAlbum } from "./photoAlbum/PhotoAlbum";
 // import { PokemonPage } from "./examples/PokemonPage";
-import { TasksApp } from "./useReducer/TaskApp";
-import { FocusScreen } from "./useRef/FocusScreen";
-
+//import { TasksApp } from "./useReducer/TaskApp";
+//import { FocusScreen } from "./useRef/FocusScreen";
+import { ScrambleWords } from "./useReducer/ScrambleWords";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     {/* <HooksApp /> */}
@@ -19,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
     {/* <PhotoAlbum /> */}
     {/* <PokemonPage /> */}
     {/* <FocusScreen /> */}
-    <TasksApp />
+    {/* <TasksApp /> */}
+    <ScrambleWords />
   </StrictMode>,
 );
