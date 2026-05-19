@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,6 +25,15 @@ export const ScrambleWords = () => {
     maxSkips,
     totalWords,
   } = state;
+
+  useEffect(() => {
+    if (points === 0) return;
+    confetti({
+      particleCount: 100,
+      spread: 120,
+      origin: { y: 0.6 },
+    });
+  }, [points]);
 
   // const [words, setWords] = useState(shuffleArray(GAME_WORDS));
 
