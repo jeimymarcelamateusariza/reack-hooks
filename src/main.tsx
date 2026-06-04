@@ -14,7 +14,8 @@ import { Toaster, toast } from "sonner";
 // import { ScrambleWords } from "./useReducer/ScrambleWords";
 // import MemoHook from "./memos/MemoHook";
 // import MemoCounter from "./memos/MemoCounter";
-import { InstagromApp } from "./useOptimistic/InstagromApp";
+// import { InstagromApp } from "./useOptimistic/InstagromApp";
+import { ProfessionalApp } from "./useContext/ProfessionalApp";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -30,6 +31,7 @@ createRoot(document.getElementById("root")!).render(
     {/* <ScrambleWords /> */}
     {/* <MemoHook /> */}
     {/* <MemoCounter /> */}
-    <InstagromApp />
+    {/* <InstagromApp /> */}
+    <ProfessionalApp />
   </StrictMode>,
 );

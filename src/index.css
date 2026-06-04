@@ -6,7 +6,7 @@
 @custom-variant dark (&:is(.dark *));
 
 .bg-gradient {
-  @apply bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-2 px-4 rounded;
+  @apply bg-gradient-to-r from-green-700 to-emerald-900 text-white font-bold py-2 px-4 rounded;
 }
 
 /* Ensure fonts are applied */
@@ -130,9 +130,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
